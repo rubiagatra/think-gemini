@@ -25,7 +25,7 @@ class Task(BaseModel):
 
 @app.post("/tasks")
 def create_task(task: Task):
-    tasks.append(task.dict())
+    tasks.append(task.model_dump())
     return task
 
 @app.get("/tasks")
@@ -34,7 +34,7 @@ def get_tasks():
 
 @app.put("/tasks/{task_id}")
 def update_task(task_id: int, task: Task):
-    tasks[task_id] = task.dict()
+    tasks[task_id] = task.model_dump()
     return task
 
 @app.delete("/tasks/{task_id}")
@@ -91,6 +91,14 @@ curl -X DELETE "http://localhost:8000/tasks/0"
 - Write the initial version yourself and ask AI to review and improve it.
 - Write the critical parts and ask AI to do the rest.
 - Write an outline of the code and ask AI to fill the missing parts.
+
+```bash
+Get your hands dirty. Write the code. It's what you are good at.
+You are a software engineer. Don't become a prompt refiner.
+
+```
+
+
 
 ---
 
