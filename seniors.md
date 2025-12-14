@@ -142,7 +142,7 @@ class TestCalculateDiscount:
 
 ```bash
 # Install pytest first
-uv add init
+uv init
 uv add pytest
 
 # Run all tests
