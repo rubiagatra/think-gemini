@@ -5,7 +5,7 @@ Build an API to create, read, update, and delete tasks. Each task has a title, d
 ## Let's use FastAPI
 
 ```bash
-uv add fastapi[standard] pydantic
+uv add "fastapi[standard]" pydantic
 ```
 
 ---
